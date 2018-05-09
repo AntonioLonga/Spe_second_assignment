@@ -19,6 +19,8 @@ from optparse import OptionParser
 import sys
 import sim
 
+
+#test 66
 # setup command line parameters
 parser = OptionParser(usage="usage: %prog [options]",
                       description="Runs a simulation configured in the "
