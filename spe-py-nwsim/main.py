@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -19,8 +19,6 @@ from optparse import OptionParser
 import sys
 import sim
 
-
-#test 66
 # setup command line parameters
 parser = OptionParser(usage="usage: %prog [options]",
                       description="Runs a simulation configured in the "
@@ -48,6 +46,7 @@ if options.config == "" or options.section == "":
     print("Required parameters config and section missing")
     print(parser.get_usage())
     sys.exit(1)
+
 
 simulator = sim.Sim.Instance()
 simulator.set_config(options.config, options.section)

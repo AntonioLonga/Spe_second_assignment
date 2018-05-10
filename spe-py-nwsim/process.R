@@ -86,6 +86,7 @@ compute.collision.rate <- function(d, group=F) {
     return(collision.rate)
 }
 
+
 # compute throughput: total bits received / simulation time
 compute.throughput <- function(d, data.rate, sim.time, group=F) {
     fields <- c('lambda')
@@ -103,6 +104,10 @@ offered.load <- function(lambda, n.nodes, packet.size=(1460+32)/2) {
     lambda*n.nodes*packet.size*8/1024/1024
 }
 
+
+
+#PRENDI SOLO I FILE DENTRO LA CARTELLA DATI
+res.folder="dati/"
 # if there is no aggregated file, load all csv files into a single one
 aggregated.file <- paste(res.folder, 'alld.Rdata', sep='/')
 if (!file.exists(aggregated.file)) {

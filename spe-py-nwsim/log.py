@@ -22,11 +22,11 @@ class Log:
     Defines data logging utilities
     """
 
-    # packet has been correctly received
+    # packet has been correctly received 1
     LOG_RECEIVED = Packet.PKT_RECEIVED
-    # packet has been corrupted due to, for example, a collision
+    # packet has been corrupted due to, for example, a collision 2
     LOG_CORRUPTED = Packet.PKT_CORRUPTED
-    # packet has just been generated
+    # packet has just been generated ....
     LOG_GENERATED = LOG_CORRUPTED + 1
     # packet has been dropped because there is no space in the queue
     LOG_QUEUE_DROPPED = LOG_GENERATED + 1
@@ -49,7 +49,7 @@ class Log:
         :param log_states: enable/disable logging of the state of nodes
         """
         self.sim = sim.Sim.Instance()
-        self.log_file = open(output_file, "w")
+        self.log_file = open("dati/"+output_file, "w")
         self.log_file.write("time,src,dst,event,size\n")
         self.log_packets = log_packets
         self.log_queue_drops = log_queue_drops

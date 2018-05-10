@@ -53,6 +53,7 @@
 		// position of nodes, list of x,y pairs
 		"nodes" : [
 			[[1,1], [2,3], [0, 0]]
+			//[[1,1], [0,0]]
 		],
 		// log file name using configuration parameters
 		"output" : "output_{interarrival.lambda}_{seed}.csv"
