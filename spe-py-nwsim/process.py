@@ -131,5 +131,4 @@ n_nodes = len(alld.src.unique())
 # compute the statistics
 st = compute_stats(alld, sim_time)
 
-st.to_csv("tmep.csv")
-print "jkdsaj"
+st.to_csv("temp.csv")

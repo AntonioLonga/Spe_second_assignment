@@ -9,7 +9,7 @@
 		// physical layer datarate in bits per second
 		"datarate" : 8000000,
 		// packet queue size. set to 0 for infinity
-		"queue" : 2,
+		"queue" : 10,
 		// packet inter-arrival distribution in 1/seconds
 		"interarrival" : [
 			{"distribution" : "exp", "lambda" : 10},
@@ -52,8 +52,9 @@
 		"processing" : {"distribution" : "const", "mean" : 0.000001},
 		// position of nodes, list of x,y pairs
 		"nodes" : [
-			[[1,1], [2,3], [0, 0]]
-			//[[1,1], [0,0]]
+			//[[1,1], [0, 0]]
+    		[[8.193,22.631], [10.007,15.253], [23.093,22.907], [0.26,23.356], [10.322,24.609], [19.605,4.392], [14.732,17.132], [20.345,2.116], [1.806,19.106], [21.5,13.835]]
+			//[[1,1], [0,0], [2,2], [3,2], [2,3], [0,2], [1,2]]
 		],
 		// log file name using configuration parameters
 		"output" : "output_{interarrival.lambda}_{seed}.csv"

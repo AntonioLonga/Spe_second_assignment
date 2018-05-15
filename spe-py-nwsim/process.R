@@ -2,6 +2,8 @@ library(plyr)
 library(doMC)
 library(ggplot2)
 registerDoMC(cores=detectCores())
+setwd("C:/Users/longa/Desktop/SPE/seconodoAsignment/Spe_second_assignment/spe-py-nwsim")
+
 
 # command line argument, if present, indicates the results folder
 args <- commandArgs(trailingOnly = T)
@@ -151,6 +153,15 @@ p <- ggplot(tr, aes(x=ol, y=tr, color=factor(dst))) +
      ylim(c(0, 3))
 ggsave(paste(res.folder, '/thr_', n.nodes, '.pdf', sep=''), width=16/div, height=9/div)
 print(p)
+
+n1tr=tr$tr
+n1tr=n1tr[1:length(n1tr)/3]
+n1ol=tr$ol
+n1ol=n1ol[1:length(n1ol)/3]
+plot(n1ol,type = 'l')
+plot(n1tr,type = 'l')
+plot(n1ol,n1tr,type = 'l')
+
 
 pcr <- ggplot(cr, aes(x=ol, y=cr, color=factor(dst))) +
        geom_line() +
